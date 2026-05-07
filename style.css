@@ -1,0 +1,150 @@
+/* ===== GLOBAL ===== */
+body{
+  font-family:'Inter','Segoe UI',sans-serif;
+  margin:0;
+  color:#333;
+  background:linear-gradient(-45deg,#ffe4ec,#e6f7ff,#fff,#fce4ff);
+  background-size:400% 400%;
+  animation:bgMove 14s ease infinite;
+  padding-top:60px;
+}
+body{
+  padding-bottom:80px; /* กันปุ่มทับ */
+}
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ===== HERO ===== */
+.hero{
+  background:rgba(255,255,255,0.65);
+  backdrop-filter:blur(20px);
+  text-align:center;
+  padding:60px 25px;
+  border-radius:30px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.1);
+  animation:fadeUp .8s ease;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  background:linear-gradient(135deg,#06C755,#00c96b);
+  color:white;
+  padding:16px 28px;
+  border-radius:999px;
+  font-weight:700;
+  transition:.25s;
+  box-shadow:0 10px 25px rgba(6,199,85,.3);
+}
+
+.btn:hover{
+  transform:translateY(-3px) scale(1.05);
+}
+
+/* ===== FORM ===== */
+input,select{
+  width:100%;
+  max-width:360px;
+  padding:14px;
+  margin:8px auto;
+  border-radius:14px;
+  border:1px solid #eee;
+  transition:.2s;
+}
+
+input:focus,select:focus{
+  border-color:#ff4d6d;
+  box-shadow:0 0 0 4px rgba(255,77,109,.15);
+}
+
+/* ===== POPUP ===== */
+#popup{
+  position:fixed;
+  bottom:25px;
+  left:25px;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(12px);
+  padding:14px 18px;
+  border-radius:16px;
+  display:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  animation:slideUp .4s ease;
+}
+
+@keyframes slideUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ===== LOADING BTN ===== */
+.btn.loading{
+  opacity:.7;
+  pointer-events:none;
+}
+
+/* ===== FLOAT BUTTON ===== */
+.fab{
+  transition:.3s;
+}
+
+.fab:hover{
+  transform:scale(1.1);
+}
+/* ===== EXIT POPUP ===== */
+.popup-box{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  display:none;
+  z-index:9999;
+  animation:fadeUp .4s ease;
+}
+
+.popup-box button{
+  margin-top:10px;
+  padding:12px 20px;
+  border:none;
+  border-radius:30px;
+  background:#ff4d6d;
+  color:white;
+  font-weight:bold;
+}
+
+/* ===== STICKY CTA ===== */
+.sticky-cta{
+  position:fixed;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  max-width:500px;
+  border-radius:30px;
+}
+.sticky-cta{
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+.sticky-cta{
+  backdrop-filter:blur(10px);
+  background:rgba(6,199,85,0.9);
+}
+
+/* ===== SHAKE EFFECT ===== */
+.shake{
+  animation:shake .4s;
+}
+
+@keyframes shake{
+  0%{transform:translateX(0)}
+  25%{transform:translateX(-5px)}
+  50%{transform:translateX(5px)}
+  75%{transform:translateX(-5px)}
+  100%{transform:translateX(0)}
+}

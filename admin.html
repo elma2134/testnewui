@@ -1,0 +1,44 @@
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>🐶 Grooming</h2>
+
+    <ul>
+      <li class="active">📋 คิวทั้งหมด</li>
+      <li>📊 Dashboard</li>
+      <li>⚙️ ตั้งค่า</li>
+    </ul>
+
+    <button onclick="toggleDark()">🌗 Dark Mode</button>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <h1>📋 ระบบจัดการคิว</h1>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>เวลา</th>
+            <th>ชื่อ</th>
+            <th>เบอร์</th>
+            <th>บริการ</th>
+            <th>สถานะ</th>
+            <th>จัดการ</th>
+          </tr>
+        </thead>
+        <tbody id="data"></tbody>
+      </table>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
