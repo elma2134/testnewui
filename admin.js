@@ -392,14 +392,56 @@ themeToggle.addEventListener("change",()=>{
   }
 });
 
-/* ===================================
-   DARK MODE
-=================================== */
+/* =========================
+   DARK MODE SWITCH
+========================= */
 
-if(localStorage.getItem("theme") === "dark"){
+const themeToggle =
+  document.getElementById("themeToggle");
+
+// LOAD SAVED THEME
+const savedTheme =
+  localStorage.getItem("theme");
+
+if(savedTheme === "dark"){
 
   document.body.classList.add("dark");
+
+  themeToggle.checked = true;
+
+}else{
+
+  document.body.classList.remove("dark");
+
+  themeToggle.checked = false;
 }
+
+// SWITCH EVENT
+themeToggle.addEventListener(
+  "change",
+  () => {
+
+    if(themeToggle.checked){
+
+      document.body.classList.add("dark");
+
+      localStorage.setItem(
+        "theme",
+        "dark"
+      );
+
+    }else{
+
+      document.body.classList.remove("dark");
+
+      localStorage.setItem(
+        "theme",
+        "light"
+      );
+    }
+
+  }
+);
 
 
 /* ===================================
