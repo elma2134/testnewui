@@ -1,44 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grooming Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 <body>
 
 <div class="app">
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
-    <h2>🐶 Grooming</h2>
+
+    <div class="logo">
+      <div class="logo-icon">🐶</div>
+      <div>
+        <h2>Grooming</h2>
+        <p>Admin Panel</p>
+      </div>
+    </div>
+
+    <div class="menu-title">MAIN MENU</div>
 
     <ul>
-      <li class="active">📋 คิวทั้งหมด</li>
-      <li>📊 Dashboard</li>
+      <li class="active">📊 Dashboard</li>
+      <li>📋 คิวทั้งหมด</li>
+      <li>🐾 ลูกค้า</li>
+      <li>📅 ปฏิทิน</li>
+      <li>📈 Analytics</li>
       <li>⚙️ ตั้งค่า</li>
     </ul>
 
-    <button onclick="toggleDark()">🌗 Dark Mode</button>
+    <div class="user-card">
+      <img src="https://i.pravatar.cc/100" alt="admin">
+      <h3>Admin Grooming</h3>
+      <p>Premium Dashboard</p>
+    </div>
+
+    <button id="darkToggle">🌙 Dark Mode</button>
+
   </aside>
 
   <!-- MAIN -->
   <main class="main">
 
-    <h1>📋 ระบบจัดการคิว</h1>
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Welcome back 👋 จัดการร้านอาบน้ำตัดขน</p>
+      </div>
 
-    <div class="card">
-      <table>
-        <thead>
-          <tr>
-            <th>เวลา</th>
-            <th>ชื่อ</th>
-            <th>เบอร์</th>
-            <th>บริการ</th>
-            <th>สถานะ</th>
-            <th>จัดการ</th>
-          </tr>
-        </thead>
-        <tbody id="data"></tbody>
-      </table>
+      <div class="topbar-right">
+
+        <div class="search-box">
+          🔍
+          <input type="text" placeholder="ค้นหา...">
+        </div>
+
+        <div class="notify">🔔</div>
+
+        <img src="https://i.pravatar.cc/50" class="avatar">
+
+      </div>
     </div>
 
-  </main>
+    <!-- STATS -->
+    <div class="stats">
 
-</div>
-
-<script src="admin.js"></script>
-</body>
+      <div class="stat-card">
+        <div class="stat-top">
+          <div>
+            <h3>คิววันนี้</h3>
+            <h1>24</h1>
+          </div>
+          <div class="stat-icon">📋</div>
+</html>

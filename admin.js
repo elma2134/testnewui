@@ -56,3 +56,18 @@ function deleteRow(id){
     body: JSON.stringify({action:"delete",id})
   }).then(()=>loadData());
 }
+const darkToggle = document.getElementById('darkToggle');
+
+if(localStorage.getItem('theme') === 'dark'){
+  document.body.classList.add('dark');
+}
+
+darkToggle.addEventListener('click',()=>{
+  document.body.classList.toggle('dark');
+
+  if(document.body.classList.contains('dark')){
+    localStorage.setItem('theme','dark');
+  }else{
+    localStorage.setItem('theme','light');
+  }
+});
