@@ -5,7 +5,7 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbyyEZicL7DsHEwoG1krHKKw04E4ggpJcT4ay1G41WUc8gOf55v_5R2tufrmaZCvIVk/exec";
 
 const table = document.getElementById("data");
-const darkToggle = document.getElementById("darkToggle");
+
 
 /* ===================================
    LOAD DATA
@@ -348,6 +348,49 @@ function showLoading(){
 
   `;
 }
+/* =========================
+   THEME SWITCH
+========================= */
+
+const themeToggle =
+  document.getElementById(
+    "themeToggle"
+  );
+
+// LOAD THEME
+if(localStorage.getItem("theme") === "dark"){
+
+  document.body.classList.add("dark");
+
+  themeToggle.checked = true;
+
+}else{
+
+  themeToggle.checked = false;
+}
+
+// TOGGLE
+themeToggle.addEventListener("change",()=>{
+
+  if(themeToggle.checked){
+
+    document.body.classList.add("dark");
+
+    localStorage.setItem(
+      "theme",
+      "dark"
+    );
+
+  }else{
+
+    document.body.classList.remove("dark");
+
+    localStorage.setItem(
+      "theme",
+      "light"
+    );
+  }
+});
 
 /* ===================================
    DARK MODE
@@ -358,65 +401,6 @@ if(localStorage.getItem("theme") === "dark"){
   document.body.classList.add("dark");
 }
 
-darkToggle.addEventListener("click",()=>{
-
-  document.body.classList.toggle("dark");
-
-  if(document.body.classList.contains("dark")){
-
-    localStorage.setItem(
-      "theme",
-      "dark"
-    );
-
-  }else{
-
-    localStorage.setItem(
-      "theme",
-      "light"
-    );
-  }
-});
-
-/* ===================================
-   UPDATE STATUS
-=================================== */
-
-async function updateStatus(id,status){
-
-  try{
-
-    await fetch(API_URL,{
-
-      method:"POST",
-
-      body:JSON.stringify({
-
-        action:"update",
-        id,
-        status
-
-      })
-
-    });
-
-    toast(
-      "อัปเดตสถานะสำเร็จ",
-      "success"
-    );
-
-    loadData();
-
-  }catch(error){
-
-    console.error(error);
-
-    toast(
-      "เกิดข้อผิดพลาด",
-      "error"
-    );
-  }
-}
 
 /* ===================================
    DELETE
