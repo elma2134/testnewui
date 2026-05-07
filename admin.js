@@ -348,49 +348,6 @@ function showLoading(){
 
   `;
 }
-/* =========================
-   THEME SWITCH
-========================= */
-
-const themeToggle =
-  document.getElementById(
-    "themeToggle"
-  );
-
-// LOAD THEME
-if(localStorage.getItem("theme") === "dark"){
-
-  document.body.classList.add("dark");
-
-  themeToggle.checked = true;
-
-}else{
-
-  themeToggle.checked = false;
-}
-
-// TOGGLE
-themeToggle.addEventListener("change",()=>{
-
-  if(themeToggle.checked){
-
-    document.body.classList.add("dark");
-
-    localStorage.setItem(
-      "theme",
-      "dark"
-    );
-
-  }else{
-
-    document.body.classList.remove("dark");
-
-    localStorage.setItem(
-      "theme",
-      "light"
-    );
-  }
-});
 
 /* =========================
    DARK MODE SWITCH
