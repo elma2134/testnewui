@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fluffy Grooming Spa</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="navbar">
+    <div class="logo">🐶 Fluffy Grooming Spa</div>
+
+    <ul>
+      <li><a href="#services">บริการ</a></li>
+      <li><a href="#gallery">ผลงาน</a></li>
+      <li><a href="#booking">จองคิว</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <h1>อาบน้ำ ตัดขน สปาสัตว์เลี้ยง</h1>
+    <p>ร้านดูแลสัตว์เลี้ยงครบวงจร พร้อมระบบจองออนไลน์</p>
+
+    <button onclick="scrollBooking()">จองคิวตอนนี้</button>
+  </div>
+</header>
+
+<section class="services" id="services">
+  <h2>บริการของเรา</h2>
+
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>🛁 อาบน้ำ</h3>
+      <p>เริ่มต้น 250 บาท</p>
+    </div>
+
+    <div class="card">
+      <h3>✂️ ตัดขน</h3>
+      <p>เริ่มต้น 450 บาท</p>
+    </div>
+
+    <div class="card">
+      <h3>✨ สปา</h3>
+      <p>เริ่มต้น 690 บาท</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <h2>ผลงานล่าสุด</h2>
+
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1200&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop">
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <h2>จองคิวออนไลน์</h2>
+
+  <form id="bookingForm">
+
+    <input type="text" placeholder="ชื่อเจ้าของ" required/>
+    <input type="text" placeholder="ชื่อสัตว์เลี้ยง" required/>
+
+    <select required>
+      <option value="">เลือกบริการ</option>
+      <option>อาบน้ำ</option>
+      <option>ตัดขน</option>
+      <option>สปา</option>
+    </select>
+
+    <input type="date" required/>
+
+    <button type="submit">ยืนยันการจอง</button>
+
+  </form>
+
+  <div id="success"></div>
+</section>
+
+<footer>
+  <p>© 2026 Fluffy Grooming Spa</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
