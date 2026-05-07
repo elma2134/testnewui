@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Grooming Spa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <nav>
+    <h1>🐶 Happy Grooming Spa</h1>
+    <a href="#booking">จองคิว</a>
+  </nav>
+
+  <div class="hero-content">
+    <h2>อาบน้ำ ตัดขน สปา ครบจบในที่เดียว</h2>
+    <p>ดูแลน้องหมาและแมวแบบพรีเมียม พร้อมระบบจองออนไลน์</p>
+    <button onclick="scrollToBooking()">จองคิวตอนนี้</button>
+  </div>
+</header>
+
+<section class="services">
+  <h2>บริการของเรา</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>🛁 อาบน้ำ</h3>
+      <p>เริ่มต้น 199 บาท</p>
+    </div>
+
+    <div class="card">
+      <h3>✂️ ตัดขน</h3>
+      <p>เริ่มต้น 399 บาท</p>
+    </div>
+
+    <div class="card">
+      <h3>✨ สปา</h3>
+      <p>เริ่มต้น 599 บาท</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>ผลงานของเรา</h2>
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1200&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1200&auto=format&fit=crop">
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop">
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <h2>จองคิวออนไลน์</h2>
+
+  <form id="bookingForm">
+    <input type="text" placeholder="ชื่อเจ้าของ" required>
+    <input type="text" placeholder="ชื่อน้องสัตว์เลี้ยง" required>
+
+    <select required>
+      <option>เลือกบริการ</option>
+      <option>อาบน้ำ</option>
+      <option>ตัดขน</option>
+      <option>สปา</option>
+    </select>
+
+    <input type="date" required>
+    <button type="submit">ยืนยันการจอง</button>
+  </form>
+
+  <div id="successMsg"></div>
+</section>
+
+<footer>
+  <p>© 2026 Happy Grooming Spa</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
