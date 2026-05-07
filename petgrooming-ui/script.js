@@ -1,1 +1,0 @@
-console.log('Pet Grooming UI Ready 🚀');
